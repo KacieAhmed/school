@@ -98,7 +98,7 @@ export function getLeaderboard() {
 }
 
 export function seedData() {
-  if (localStorage.getItem('monad_learn_seeded_v3')) return;
+  if (localStorage.getItem('monad_learn_seeded_v4')) return;
 
   const classicTracks = {
     freshman: ["what-is-blockchain","intro-to-monad","setting-up-wallet","first-smart-contract","gas-and-transactions"],
@@ -162,10 +162,9 @@ export function seedData() {
   const progress = getAllProgress();
   const profiles = getAllProfiles();
 
-  // Seed kacieahmed with 5 lessons (Bronze rank)
+  // Seed kacieahmed with all lessons (Grandmaster rank)
   const kacieProgress = {};
-  const kacieLessons = allSlugs.slice(0, 5);
-  for (const { trackId, slug } of kacieLessons) {
+  for (const { trackId, slug } of allSlugs) {
     if (!kacieProgress[trackId]) kacieProgress[trackId] = {};
     kacieProgress[trackId][slug] = true;
   }
@@ -181,12 +180,12 @@ export function seedData() {
 
   saveAllProgress(progress);
   localStorage.setItem(PROFILES_KEY, JSON.stringify(profiles));
-  localStorage.setItem('monad_learn_seeded_v3', 'true');
+  localStorage.setItem('monad_learn_seeded_v4', 'true');
 
   // Also register them in the users store so they appear
   const USERS_KEY = 'monad_learn_users';
   const users = JSON.parse(localStorage.getItem(USERS_KEY) || '{}');
-  users["kacieahmed@gmail.com"] = { email: "kacieahmed@gmail.com", password: "monad123" };
+  users["kacieahmed@gmail.com"] = { email: "kacieahmed@gmail.com", password: "ksa99ilh" };
   for (const u of fakeUsers) users[u.email] = { email: u.email, password: "pass1234" };
   localStorage.setItem(USERS_KEY, JSON.stringify(users));
 }

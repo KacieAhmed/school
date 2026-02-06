@@ -1,10 +1,24 @@
-import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useTheme } from '../context/ThemeContext';
 
 export default function Navbar() {
   const { user, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  function scrollToTracks(e) {
+    e.preventDefault();
+    if (location.pathname === '/') {
+      document.getElementById('tracks')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/');
+      setTimeout(() => {
+        document.getElementById('tracks')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }
 
   return (
     <nav className="sticky top-0 z-50 bg-surface/95 backdrop-blur border-b border-surface-light">
@@ -25,14 +39,13 @@ export default function Navbar() {
             >
               Home
             </NavLink>
-            <NavLink
-              to="/tracks/freshman"
-              className={({ isActive }) =>
-                `text-sm font-medium no-underline transition-colors ${isActive ? 'text-primary' : 'text-muted hover:text-text'}`
-              }
+            <a
+              href="#"
+              onClick={scrollToTracks}
+              className="text-sm font-medium no-underline transition-colors text-muted hover:text-text cursor-pointer"
             >
               Tracks
-            </NavLink>
+            </a>
             <NavLink
               to="/leaderboard"
               className={({ isActive }) =>

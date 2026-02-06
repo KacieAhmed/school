@@ -26,12 +26,22 @@ export default function Landing() {
           <p className="text-lg sm:text-xl text-muted max-w-2xl mx-auto mb-10">
             Master blockchain development on Monad — the high-performance EVM-compatible Layer 1. From basics to building production dApps.
           </p>
-          <Link
-            to={user ? "/tracks/freshman" : "/signup"}
-            className="inline-block bg-primary hover:bg-primary/80 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all no-underline hover:scale-105"
-          >
-            {user ? "Learn" : "Get Started"}
-          </Link>
+          {user ? (
+            <a
+              href="#tracks"
+              onClick={(e) => { e.preventDefault(); document.getElementById('tracks')?.scrollIntoView({ behavior: 'smooth' }); }}
+              className="inline-block bg-primary hover:bg-primary/80 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all no-underline hover:scale-105 cursor-pointer"
+            >
+              Learn
+            </a>
+          ) : (
+            <Link
+              to="/signup"
+              className="inline-block bg-primary hover:bg-primary/80 text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all no-underline hover:scale-105"
+            >
+              Get Started
+            </Link>
+          )}
         </div>
       </section>
 

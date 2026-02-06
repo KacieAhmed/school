@@ -15,7 +15,7 @@ export default function LessonCard({ lesson, trackId, index, isComplete }) {
           {isComplete ? '\u2713' : index + 1}
         </div>
         <div className="flex-1 min-w-0">
-          <h4 className="text-white font-medium truncate">{lesson.title}</h4>
+          <h4 className="text-heading font-medium truncate">{lesson.title}</h4>
           <p className="text-muted text-sm">{lesson.readingTime} min read</p>
         </div>
         <svg className="w-5 h-5 text-muted flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -25,7 +25,7 @@ export default function Quiz({ questions, onComplete }) {
 
   return (
     <div className="bg-surface rounded-xl border border-surface-light p-6">
-      <h3 className="text-xl font-bold text-white mb-6">Quiz</h3>
+      <h3 className="text-xl font-bold text-heading mb-6">Quiz</h3>
 
       {questions.map((q, qi) => (
         <div key={qi} className="mb-6">
@@ -74,7 +74,7 @@ export default function Quiz({ questions, onComplete }) {
         </button>
       ) : (
         <div className={`p-4 rounded-lg text-center ${score >= 70 ? 'bg-success/10 border border-success/20' : 'bg-red-500/10 border border-red-500/20'}`}>
-          <p className="text-lg font-bold text-white mb-1">
+          <p className="text-lg font-bold text-heading mb-1">
             Score: {score}%
           </p>
           <p className={`text-sm ${score >= 70 ? 'text-success' : 'text-red-400'}`}>

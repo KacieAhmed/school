@@ -22,7 +22,7 @@ export default function Lesson() {
   if (!track || !lesson) {
     return (
       <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold text-white mb-4">Lesson Not Found</h1>
+        <h1 className="text-2xl font-bold text-heading mb-4">Lesson Not Found</h1>
         <Link to="/" className="text-primary hover:text-primary-light no-underline">
           Back to Home
         </Link>
@@ -43,13 +43,13 @@ export default function Lesson() {
   function renderContent(block, i) {
     switch (block.type) {
       case 'heading':
-        return <h2 key={i} className="text-xl font-bold text-white mt-8 mb-4">{block.text}</h2>;
+        return <h2 key={i} className="text-xl font-bold text-heading mt-8 mb-4">{block.text}</h2>;
       case 'paragraph':
         return <p key={i} className="text-text leading-relaxed mb-4">{block.text}</p>;
       case 'code':
         return (
-          <pre key={i} className="bg-dark-bg border border-surface-light rounded-lg p-4 overflow-x-auto mb-4">
-            <code className="text-sm text-primary-light font-mono whitespace-pre">{block.text}</code>
+          <pre key={i} className="bg-surface border border-surface-light rounded-lg p-4 overflow-x-auto mb-4">
+            <code className="text-sm text-primary font-mono whitespace-pre">{block.text}</code>
           </pre>
         );
       case 'list':
@@ -85,7 +85,7 @@ export default function Lesson() {
             </span>
           )}
         </div>
-        <h1 className="text-3xl font-bold text-white mb-2">{lesson.title}</h1>
+        <h1 className="text-3xl font-bold text-heading mb-2">{lesson.title}</h1>
         <p className="text-muted text-sm">{lesson.readingTime} min read</p>
       </div>
 

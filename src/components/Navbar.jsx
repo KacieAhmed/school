@@ -61,14 +61,14 @@ export default function Navbar() {
             {/* Theme toggle */}
             <button
               onClick={toggleTheme}
-              className="relative w-10 h-5 rounded-full bg-surface-light cursor-pointer border-none transition-colors flex-shrink-0"
+              className="relative w-10 h-5 rounded-full bg-surface-light cursor-pointer border border-input-border transition-colors flex-shrink-0"
               aria-label="Toggle theme"
             >
               <span
                 className={`absolute top-0.5 w-4 h-4 rounded-full transition-all duration-200 ${
-                  theme === 'light'
-                    ? 'left-5.5 bg-yellow-400'
-                    : 'left-0.5 bg-primary'
+                  theme === 'dark'
+                    ? 'left-5.5 bg-primary'
+                    : 'left-0.5 bg-yellow-400'
                 }`}
               />
             </button>

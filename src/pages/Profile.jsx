@@ -50,7 +50,7 @@ export default function Profile() {
 
   return (
     <div className="max-w-2xl mx-auto px-4 py-12">
-      <h1 className="text-3xl font-bold text-white mb-8">Profile</h1>
+      <h1 className="text-3xl font-bold text-heading mb-8">Profile</h1>
 
       {/* Avatar + form */}
       <form onSubmit={handleSave} className="bg-surface rounded-xl border border-surface-light p-6 mb-8">
@@ -102,7 +102,7 @@ export default function Profile() {
                 value={displayName}
                 onChange={e => setDisplayName(e.target.value)}
                 placeholder="How you appear on the leaderboard"
-                className="w-full bg-surface-light border border-surface-light focus:border-primary rounded-lg px-4 py-3 text-white outline-none transition-colors"
+                className="w-full bg-input-bg border border-input-border focus:border-primary rounded-lg px-4 py-3 text-text outline-none transition-colors"
               />
             </div>
             <div>
@@ -127,15 +127,15 @@ export default function Profile() {
 
       {/* Stats */}
       <div className="bg-surface rounded-xl border border-surface-light p-6">
-        <h2 className="text-xl font-bold text-white mb-4">Your Progress</h2>
+        <h2 className="text-xl font-bold text-heading mb-4">Your Progress</h2>
 
         <div className="grid grid-cols-2 gap-4 mb-6">
           <div className="bg-surface-light rounded-lg p-4 text-center">
-            <div className="text-2xl font-bold text-white">{totalCompleted}</div>
+            <div className="text-2xl font-bold text-heading">{totalCompleted}</div>
             <div className="text-xs text-muted mt-1">Lessons Completed</div>
           </div>
           <div className="bg-surface-light rounded-lg p-4 text-center">
-            <div className="text-2xl font-bold text-white">{totalLessons}</div>
+            <div className="text-2xl font-bold text-heading">{totalLessons}</div>
             <div className="text-xs text-muted mt-1">Total Lessons</div>
           </div>
         </div>

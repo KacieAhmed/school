@@ -15,7 +15,7 @@ export default function Track() {
   if (!track) {
     return (
       <div className="max-w-3xl mx-auto px-4 py-16 text-center">
-        <h1 className="text-2xl font-bold text-white mb-4">Track Not Found</h1>
+        <h1 className="text-2xl font-bold text-heading mb-4">Track Not Found</h1>
         <Link to="/" className="text-primary hover:text-primary-light no-underline">
           Back to Home
         </Link>
@@ -34,7 +34,7 @@ export default function Track() {
 
       <div className="mb-10">
         <div className="text-5xl mb-4">{track.emoji}</div>
-        <h1 className="text-3xl font-bold text-white mb-3">{track.title}</h1>
+        <h1 className="text-3xl font-bold text-heading mb-3">{track.title}</h1>
         <p className="text-muted mb-6">{track.description}</p>
         <div className="flex items-center gap-3">
           <ProgressBar percentage={progress} />

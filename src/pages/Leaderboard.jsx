@@ -28,7 +28,7 @@ export default function Leaderboard() {
                 {/* Position */}
                 <span className={`flex-shrink-0 w-7 text-center text-sm font-bold ${
                   i === 0 ? 'text-yellow-400' :
-                  i === 1 ? 'text-gray-300' :
+                  i === 1 ? 'text-muted' :
                   i === 2 ? 'text-orange-400' :
                   'text-muted'
                 }`}>

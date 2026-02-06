@@ -11,7 +11,7 @@ export default function TrackCard({ track, progress }) {
         <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
         <div className="relative">
           <div className="text-4xl mb-4">{track.emoji}</div>
-          <h3 className="text-xl font-bold text-white mb-2">{track.title}</h3>
+          <h3 className="text-xl font-bold text-heading mb-2">{track.title}</h3>
           <p className="text-muted text-sm mb-4 leading-relaxed">{track.description}</p>
           <div className="flex items-center justify-between text-xs text-muted mb-3">
             <span>{track.lessons.length} lessons</span>

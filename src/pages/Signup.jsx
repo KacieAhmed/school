@@ -35,7 +35,7 @@ export default function Signup() {
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-4">
       <div className="w-full max-w-md">
-        <h1 className="text-3xl font-bold text-white text-center mb-2">Create Account</h1>
+        <h1 className="text-3xl font-bold text-heading text-center mb-2">Create Account</h1>
         <p className="text-muted text-center mb-8">Start your Monad development journey</p>
 
         <form onSubmit={handleSubmit} className="bg-surface rounded-xl border border-surface-light p-8 space-y-5">
@@ -52,7 +52,7 @@ export default function Signup() {
               required
               value={email}
               onChange={e => setEmail(e.target.value)}
-              className="w-full bg-surface-light border border-surface-light focus:border-primary rounded-lg px-4 py-3 text-white outline-none transition-colors"
+              className="w-full bg-input-bg border border-input-border focus:border-primary rounded-lg px-4 py-3 text-text outline-none transition-colors"
               placeholder="you@example.com"
             />
           </div>
@@ -64,7 +64,7 @@ export default function Signup() {
               required
               value={password}
               onChange={e => setPassword(e.target.value)}
-              className="w-full bg-surface-light border border-surface-light focus:border-primary rounded-lg px-4 py-3 text-white outline-none transition-colors"
+              className="w-full bg-input-bg border border-input-border focus:border-primary rounded-lg px-4 py-3 text-text outline-none transition-colors"
               placeholder="At least 6 characters"
             />
           </div>
@@ -76,7 +76,7 @@ export default function Signup() {
               required
               value={confirmPassword}
               onChange={e => setConfirmPassword(e.target.value)}
-              className="w-full bg-surface-light border border-surface-light focus:border-primary rounded-lg px-4 py-3 text-white outline-none transition-colors"
+              className="w-full bg-input-bg border border-input-border focus:border-primary rounded-lg px-4 py-3 text-text outline-none transition-colors"
               placeholder="Repeat your password"
             />
           </div>

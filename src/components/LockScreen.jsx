@@ -55,13 +55,10 @@ export default function LockScreen({ onUnlock }) {
           fontSize: '1.6rem', fontWeight: 700, marginBottom: '0.25rem',
           color: '#fff', letterSpacing: '-0.02em',
         }}>
-          Monad <span style={{ color: '#836EF9' }}>Developer Report</span>
+          Monad <span style={{ color: '#836EF9' }}>School Demo</span>
         </h1>
-        <p style={{ fontSize: '0.85rem', color: '#666', marginBottom: '0.4rem' }}>
-          February 2026
-        </p>
         <p style={{ fontSize: '0.85rem', color: '#555', marginBottom: '1.5rem' }}>
-          Enter the password to view this document.
+          Enter the password to continue.
         </p>
 
         <form onSubmit={handleSubmit} style={{ display: 'flex', gap: '0.5rem', justifyContent: 'center' }}>

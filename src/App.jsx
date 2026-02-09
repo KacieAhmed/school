@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ThemeProvider } from './context/ThemeContext';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+import LockScreen from './components/LockScreen';
 import Landing from './pages/Landing';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
@@ -13,6 +15,12 @@ import Profile from './pages/Profile';
 import Jobs from './pages/Jobs';
 
 export default function App() {
+  const [unlocked, setUnlocked] = useState(() => sessionStorage.getItem('monad_unlocked') === '1');
+
+  if (!unlocked) {
+    return <LockScreen onUnlock={() => setUnlocked(true)} />;
+  }
+
   return (
     <ThemeProvider>
     <HashRouter>
